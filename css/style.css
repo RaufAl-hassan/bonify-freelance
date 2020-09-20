@@ -157,7 +157,11 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 0;
+  }
+
+  .main-header .main-navbar .container .navbar-brand {
+    font-size: 1.8rem;
   }
 
   .main-header .main-navbar .container .navbar-toggler-icon {
