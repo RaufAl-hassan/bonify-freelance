@@ -22,6 +22,7 @@ html {
 body {
   font: normal 1.6rem/1.4 "Raleway", sans-serif;
   background: var(--lightColor);
+  color: var(--blackColor);
 }
 
 a {
@@ -141,6 +142,67 @@ li {
   }
 }
 
+/* MAIN MAIN */
+.main-main {
+  background: var(--whiteColor);
+  padding: 1rem 0;
+}
+
+.main-main .container .services .services-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  grid-gap: 1rem;
+}
+
+.main-main .container .services .services-content article {
+  border: 1px solid var(--lightColor);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.main-main .container .services .services-content .services-article-header {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.main-main .container .services .services-content .services-article-header i {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.main-main
+  .container
+  .services
+  .services-content
+  .services-article-header
+  .fa-android,
+.main-main
+  .container
+  .services
+  .services-content
+  .services-article-header
+  .fa-node {
+  color: green;
+}
+.main-main
+  .container
+  .services
+  .services-content
+  .services-article-header
+  .fa-html5 {
+  color: coral;
+}
+
+.main-main .container .services .services-content .services-article-header h2 {
+  font-family: "Roboto Mono", monospace;
+}
+
+.main-main .container .services .services-content p {
+  font-size: 1.7rem;
+}
+
 /* tablet screen */
 @media (max-width: 76.8rem) {
   /* MAIN-HEADER */
@@ -191,5 +253,10 @@ li {
   .main-header .main-navbar .container .navbar-left-links {
     display: flex;
     flex-direction: column;
+  }
+
+  /* MAIN-MAIN */
+  .main-main .container .services .services-content {
+    grid-template-columns: 1fr;
   }
 }

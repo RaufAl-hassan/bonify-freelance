@@ -23,8 +23,7 @@ const mainNavbarSectionObserver = new IntersectionObserver(
     });
   },
   {
-    rootMargin: "-100px 0px 0px 0px",
+    rootMargin: "-500px 0px 0px 0px",
   }
 );
-
 mainNavbarSectionObserver.observe(mainHeader);
