@@ -52,22 +52,6 @@ li {
   width: 100%;
   background: rgba(0, 0, 0, 0.425);
 }
-.main-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.425);
-}
-.main-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.425);
-}
 
 .main-header .main-header-content {
   z-index: 2;
@@ -78,6 +62,7 @@ li {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999;
 }
 
 .main-header .main-navbar .container {
@@ -93,6 +78,12 @@ li {
 .main-header .main-navbar .container a {
   color: var(--whiteColor);
   letter-spacing: 0.2rem;
+}
+
+.main-header .main-navbar .container .navbar-left-right-links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-header .main-navbar .container ul {
@@ -113,6 +104,84 @@ li {
 }
 
 .main-header .hero {
-  font-family: "Roboto Mono", monospace;
   text-align: center;
+}
+
+.main-header .hero h1 {
+  animation: hero-h1 1s ease-in-out forwards;
+  font-family: "Roboto Mono", monospace;
+  position: relative;
+  width: 100%;
+  left: -1100%;
+}
+
+.main-header .hero a {
+  animation: hero-links 1s ease-in-out 1s forwards;
+  position: relative;
+  opacity: 0;
+}
+
+@keyframes hero-h1 {
+  to {
+    left: 0;
+  }
+}
+
+@keyframes hero-links {
+  to {
+    opacity: 1;
+  }
+}
+
+/* tablet screen */
+@media (max-width: 76.8rem) {
+  /* MAIN-HEADER */
+  .main-header .main-navbar {
+    background: var(--whiteColor);
+    color: var(--blackColor);
+    box-shadow: 0.2rem 0.2rem 0.2rem var(--darkColor);
+  }
+
+  .main-header .main-navbar .container a {
+    color: var(--blackColor);
+  }
+
+  .main-header .main-navbar .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+
+  .main-header .main-navbar .container .brand-toggler-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .main-header .main-navbar .container .navbar-toggler-icon {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  .main-header .main-navbar .container .navbar-left-right-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    height: 0;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+  }
+
+  .show-navbar-links {
+    height: 100vh !important;
+  }
+
+  .main-header .main-navbar .container .navbar-left-links {
+    display: flex;
+    flex-direction: column;
+  }
 }
