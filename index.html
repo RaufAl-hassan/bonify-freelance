@@ -3,39 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/utility.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Home | Bonify Developer</title>
   </head>
   <body>
     <!-- header -->
-    <header>
-      <!-- navbar -->
-      <nav>
-        <a href="" class="navbar-brand">Bonify Developer</a>
-        <ul class="nav-left">
-          <li class="nav-item">
-            <a href="./index.html">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a href="./about.html">ABOUT</a>
-          </li>
-          <li class="nav-item">
-            <a href="./about.html">PRICING</a>
-          </li>
-          <li class="nav-item">
-            <a href="./index.html">BLOG</a>
-          </li>
-        </ul>
-        <ul class="nav-right">
-          <li class="btn btn-outline"><a href="">LOGIN</a></li>
-          <li class="btn btn-outline"><a href="">JOIN</a></li>
-        </ul>
-      </nav>
-      <!-- end navbar -->
-      <!-- hero section -->
-      <div class="div hero">
-        <h1>I AM HERE TO MAKE YOUR BUSINESS DIGITAL AND FLEXIBLE</h1>
+    <header class="main-header">
+      <!-- header-content -->
+      <div class="main-header-content">
+        <!-- navbar -->
+        <nav class="main-navbar">
+          <!-- container -->
+          <div class="container">
+            <h2 class="navbar-brand">
+              <a href="">&lt;Bonify Developer</a>
+              <span class="text-primary">/</span>&gt;
+            </h2>
+            <i class="fa fa-bars navbar-toggler-icon"></i>
+            <ul class="navbar-left-links">
+              <li class="nav-item active">
+                <a href="./index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a href="./about.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a href="./about.html">PRICING</a>
+                <li class="nav-item">
+                  <a href="./index.html">BLOG</a>
+                </li>
+              </li>
+              <li class="nav-item">
+                <a href="./index.html">BLOG</a>
+              </li>
+            </ul>
+            <ul class="navbar-right-links">
+              <li class="btn btn-outline-white"><a href="">LOGIN</a></li>
+              <li class="btn btn-primary"><a href="">JOIN</a></li>
+            </ul>
+          </div>
+          <!-- end container -->
+        </nav>
+        <!-- end navbar -->
+        <!-- hero section -->
+        <div class="hero">
+          <h1>I AM HERE TO MAKE YOUR BUSINESS DIGITAL AND FLEXIBLE</h1>
+          <a href="#about" class="btn btn-primary btn-lg">
+            Learn More
+            <i class="fa fa-chevron-down"></i>
+          </a>
+          <a href="#about" class="btn btn-primary btn-lg">
+            Contact Me
+            <i class="fa fa-phone"></i>
+          </a>
+        </div>
+        <!-- end hero section -->
       </div>
-      <!-- end hero section -->
+      <!-- end header-content -->
+
+      <div class="overlay"></div>
     </header>
     <!-- end header -->
   </body>

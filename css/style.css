@@ -1,0 +1,118 @@
+/* 
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
+:root {
+  --primaryColor: rgb(25, 166, 209);
+  --lightColor: #f3f3f3;
+  --whiteColor: #fff;
+  --darkColor: #333;
+  --blackColor: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font: normal 1.6rem/1.4 "Raleway", sans-serif;
+  background: var(--lightColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* MAIN-HEADER */
+.main-header {
+  background: url("../img/pexels-christina-morillo-1181354.jpg") no-repeat
+    center/cover;
+  color: var(--whiteColor);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.main-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.425);
+}
+.main-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.425);
+}
+.main-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.425);
+}
+
+.main-header .main-header-content {
+  z-index: 2;
+}
+
+.main-header .main-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.main-header .main-navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .main-navbar .container .navbar-toggler-icon {
+  display: none;
+}
+
+.main-header .main-navbar .container a {
+  color: var(--whiteColor);
+  letter-spacing: 0.2rem;
+}
+
+.main-header .main-navbar .container ul {
+  display: flex;
+}
+
+.main-header .main-navbar .container ul li a {
+  display: inline-block;
+}
+
+.main-header .main-navbar .container .navbar-left-links li {
+  padding: 0.6rem;
+  margin: 0 0.5rem;
+}
+
+.main-header .main-navbar .container .navbar-left-links li a:hover {
+  border-bottom: 0.2rem solid var(--primaryColor);
+}
+
+.main-header .hero {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+}

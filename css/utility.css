@@ -1,0 +1,35 @@
+.container {
+  --maxWidth: 100rem;
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.active {
+  background: var(--primaryColor);
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  background: var(--lightColor);
+  display: inline-block;
+  margin: 1rem 0.5rem;
+  border: none;
+  color: var(--whiteColor);
+  outline: none;
+}
+.btn-outline-white {
+  background: transparent;
+  border: 1px solid var(--whiteColor);
+}
+.btn-primary {
+  background: var(--primaryColor);
+}
+.btn-lg {
+  padding: 1rem 2rem;
+}
+
+.text-primary {
+  color: var(--primaryColor);
+}
