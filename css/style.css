@@ -159,12 +159,13 @@ img {
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   grid-gap: 1rem;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 .main-main .container .services .services-content article {
-  border: 1px solid var(--lightColor);
+  border: 0.1rem solid var(--lightColor);
   padding: 1rem;
-  border-radius: 0.5rem;
   text-align: center;
 }
 
@@ -217,17 +218,20 @@ img {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   align-items: start;
+  overflow: hidden;
 }
+
 .main-main .container .our-team .our-team-content .img-container {
   overflow: hidden;
-  width: 30rem;
-  height: 30rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   margin: 0 auto;
 }
 
 .main-main .container .our-team .our-team-content .img-container img {
   display: inline-block;
+  height: 100%;
 }
 
 .main-main .container .our-team .our-team-content article {

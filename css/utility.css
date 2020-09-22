@@ -80,3 +80,36 @@ form {
   font-size: 2.5rem;
   color: var(--darkColor);
 }
+
+.lead {
+  font-family: "Roboto Mono", monospace;
+}
+
+.fade-out-left {
+  transform: translateX(-99%);
+  transition: opacity, transform 0.5s ease-in-out 2s;
+  opacity: 0;
+}
+.fade-out-right {
+  transition: opacity, transform 0.5s ease-in-out 2s;
+  transform: translateX(99%);
+  opacity: 0;
+}
+
+.fade-out-middle {
+  transition: opacity, transform 1s ease-in-out;
+  transform: translateX(-99%);
+  opacity: 0;
+}
+
+.fade-in {
+  transform: translate(0) !important;
+  opacity: 1;
+}
+
+@media (max-width: 76.8rem) {
+  .fade-out-left,
+  .fade-out-right {
+    transition: opacity, transform 1s ease-in-out;
+  }
+}

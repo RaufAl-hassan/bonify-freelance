@@ -5,6 +5,9 @@ const mainNavbarLinksWrapper = document.querySelector(
 );
 const mainNavbar = document.querySelector(".main-navbar");
 const mainHeader = document.querySelector(".main-header");
+const sliders = document.querySelectorAll(
+  ".fade-out-left, .fade-out-right, .fade-out-middle"
+);
 
 // handle navbar toggle
 togglerIcon.addEventListener("click", () =>
@@ -12,7 +15,7 @@ togglerIcon.addEventListener("click", () =>
 );
 
 // navbar intersection Observer
-const mainNavbarSectionObserver = new IntersectionObserver(
+const mainNavbarInterSectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
@@ -23,7 +26,22 @@ const mainNavbarSectionObserver = new IntersectionObserver(
     });
   },
   {
-    rootMargin: "-500px 0px 0px 0px",
+    rootMargin: "-300px 0px 0px 0px",
   }
 );
-mainNavbarSectionObserver.observe(mainHeader);
+mainNavbarInterSectionObserver.observe(mainHeader);
+
+// sliders
+const sliderIntersectionObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("fade-in");
+      observer.observe(entry.target);
+    });
+  },
+  { rootMargin: "-200px 0px -100px 0px" }
+);
+sliders.forEach((slider) => {
+  sliderIntersectionObserver.observe(slider);
+});
