@@ -1,3 +1,44 @@
+/* 
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
+:root {
+  --primaryColor: rgb(25, 166, 209);
+  --lightColor: #f3f3f3;
+  --whiteColor: #fff;
+  --darkColor: #333;
+  --blackColor: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font: normal 1.6rem/1.4 "Raleway", sans-serif;
+  background: var(--whiteColor);
+  color: var(--blackColor);
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
 .container {
   --maxWidth: 110rem;
   max-width: var(--maxWidth);
@@ -107,9 +148,108 @@ form {
   opacity: 1;
 }
 
+/* navbar */
+.navbar {
+  border-bottom: 1px solid #ddd;
+  letter-spacing: 0.2rem;
+  overflow: hidden;
+}
+
+.navbar a {
+  color: var(--blackColor);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .container .brand-toggler-icon-wrapper .navbar-toggler-icon {
+  display: none;
+}
+
+.navbar .container .navbar-links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.navbar .container .navbar-links-wrapper ul {
+  display: flex;
+}
+
+.navbar .container .navbar-links-wrapper .navbar-left-links li a {
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin: 0.2rem;
+}
+
+.navbar .container .navbar-links-wrapper ul li:hover > a {
+  border-bottom: 0.2rem solid var(--primaryColor);
+}
+
 @media (max-width: 76.8rem) {
   .fade-out-left,
   .fade-out-right {
     transition: opacity, transform 1s ease-in-out;
+  }
+
+  /* navbar */
+  .navbar .container {
+    justify-content: stretch;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar .container .brand-toggler-icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 1000;
+  }
+
+  .navbar .container .brand-toggler-icon-wrapper i {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .navbar .container .brand-toggler-icon-wrapper h2 {
+    font-size: 2.3rem;
+  }
+
+  .navbar .container .brand-toggler-icon-wrapper .navbar-toggler-icon {
+    display: inline-block;
+  }
+
+  .navbar .container .navbar-links-wrapper {
+    justify-content: stretch;
+    flex-direction: column;
+    align-items: stretch;
+    height: 0;
+    transition: height 0.2s linear;
+  }
+
+  .show-navbar-links {
+    height: 100vh !important;
+  }
+
+  .navbar .container .navbar-links-wrapper > .navbar-left-links {
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .navbar .container .navbar-links-wrapper .navbar-left-links li a {
+    padding: 1rem 0;
+    padding-right: 1rem;
+    display: inline-block;
+    margin: 0.2rem;
+  }
+
+  .navbar .container .navbar-links-wrapper ul li:hover > a {
+    border-bottom: 0.2rem solid var(--primaryColor);
   }
 }
